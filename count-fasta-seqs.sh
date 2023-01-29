@@ -94,3 +94,19 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+sum=0 
+for filepath in "$@" 
+do 
+
+
+
+f="$(basename -- $filepath)"
+n=`grep ">" $filepath | wc -l` 
+	echo "$n $f" 
+
+done 
+
+sum=`grep ">" $@ | wc -l` 
+	echo "$sum"
+
+
